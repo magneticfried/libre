@@ -217,6 +217,59 @@
             .bento-card.full-width { grid-column: span 1; }
             .hero h1 { font-size: 48px; }
         }
+        /* --- Toggle (iOS style) --- */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toggle-label {
+  font-size: 12px;
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background-color: #d1d1d6;
+  border-radius: 999px;
+  transition: background-color 0.25s var(--easing);
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  top: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.25s var(--easing);
+}
+
+input:checked + .slider {
+  background-color: var(--accent-color);
+}
+
+input:checked + .slider::before {
+  transform: translateX(16px);
+}
     </style>
 </head>
 <body>
@@ -287,22 +340,20 @@
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-        // Dark Mode Toggle
-        const btn = document.getElementById('themeToggle');
-        const body = document.body;
+        const toggle = document.getElementById("themeToggle");
+const body = document.body;
 
-        btn.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            const isDark = body.classList.contains('dark-mode');
-            btn.innerText = isDark ? 'Dark' : 'Light';
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        });
+toggle.addEventListener("change", () => {
+  const isDark = toggle.checked;
+  body.classList.toggle("dark-mode", isDark);
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+});
 
-        // Load Preference
-        if (localStorage.getItem('theme') === 'dark') {
-            body.classList.add('dark-mode');
-            btn.innerText = 'Dark';
-        }
+// load saved preference
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark-mode");
+  toggle.checked = true;
+}
     </script>
 </body>
 </html>
