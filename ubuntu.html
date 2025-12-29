@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Libre - Ubuntu</title>
+<script>
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark" || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add("dark-mode");
+  }
+</script>
+  <link rel="stylesheet" href="styles/core.css">
+  <link rel="stylesheet" href="styles/components.css">
+</head>
+<body>
+
+<div class="detail-card">
+  <h1>Ubuntu (Light)</h1>
+  <p>
+Features the modern <strong>GNOME interface</strong>.
+The most <strong>user-friendly</strong> transition from Windows. Based on Ubuntu 25.10. Extremely lightweight and reliable.
+    <br><br>
+    <span style="font-size: 14px; opacity: 0.7;">
+      Assets: 2.5GB • Total with ISO: 8.3GB
+    </span>
+  </p>
+
+  <div class="btn-group">
+  <a href="#" class="btn btn-primary">Download Assets & Tweaks</a>
+
+  <a href="https://ubuntu.com/download/desktop/thank-you?version=25.10&architecture=amd64" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Download .ISO Image</a>
+</div>
+
+  <a href="downloads.html" class="back-link">← Back to selection</a>
+</div>
+
+</body>
+</html>

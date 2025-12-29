@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Libre - Download Details</title>
+  <link rel="stylesheet" href="styles/core.css">
+  <link rel="stylesheet" href="styles/components.css">
+
+  <script>
+    // Apply theme early to avoid flash; uses html.dark-mode
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark" || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add("dark-mode");
+    }
+  </script>
+</head>
+<body>
+
+<div class="detail-card">
+  <h1>Windows 11 (Light)</h1>
+  <p>
+    This version includes <strong>Windows 11</strong>, alongside Rufus, Libre, and drivers. Ideal for those who just want a simple bypass.
+    <br><br>
+    <span style="font-size: 14px; opacity: 0.7;">
+      Light (No ISO): 2.5GB • Total with ISO: 10GB
+    </span>
+  </p>
+
+  <div class="btn-group">
+    <a href="#" class="btn btn-primary">Download Assets & Drivers</a>
+    
+    <a href="#" class="btn btn-secondary">Download .ISO Image</a>
+  </div>
+
+  <a href="downloads.html" class="back-link">← Back to selection</a>
+</div>
+
+</body>
+</html>

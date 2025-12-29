@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Libre - Windows 10</title>
+<script>
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark" || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add("dark-mode");
+  }
+</script>
+  <link rel="stylesheet" href="styles/core.css">
+  <link rel="stylesheet" href="styles/components.css">
+</head>
+<body>
+
+<div class="detail-card">
+  <h1>Windows 10 (Light)</h1>
+  <p>
+    The classic choice. Optimized for <strong>stability and performance</strong> on older hardware. Includes removed telemetry and pre-installed Libre drivers.
+    <br><br>
+    <span style="font-size: 14px; opacity: 0.7;">
+      Light (No ISO): 1.8GB • Total with ISO: 5.5GB
+    </span>
+  </p>
+
+  <div class="btn-group">
+    <a href="#" class="btn btn-primary">Download Assets & Drivers</a>
+    <a href="#" class="btn btn-secondary">Download .ISO Image</a>
+  </div>
+
+  <a href="downloads.html" class="back-link">← Back to selection</a>
+</div>
+
+</body>
+</html>

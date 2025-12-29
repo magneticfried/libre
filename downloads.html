@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Libre - Downloads</title>
+<style>
+/* --- Reusing your Core Styles --- */
+html { scroll-behavior: smooth; }
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1d1d1f;
+  --text-secondary: #86868b;
+  --accent-color: #0071e3;
+  --nav-bg: rgba(255, 255, 255, 0.8);
+  --card-bg: #f5f5f7;
+  --easing: cubic-bezier(0.4, 0, 0.2, 1);
+}
+html.dark-mode {
+  --bg-color: #000000;
+  --text-color: #f5f5f7;
+  --text-secondary: #a1a1a6;
+  --accent-color: #2997ff;
+  --nav-bg: rgba(0, 0, 0, 0.8);
+  --card-bg: #1c1c1e;
+}
+* {margin:0;padding:0;box-sizing:border-box;}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.5s var(--easing);
+  overflow-x: hidden;
+}
+
+/* Nav */
+nav {
+  position: fixed; top: 0; width: 100%; height: 44px;
+  background: var(--nav-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  z-index: 9999; display: flex; justify-content: center; align-items: center;
+  border-bottom: 1px solid rgba(128,128,128,0.1);
+}
+.nav-content { width: 100%; max-width: 980px; display: flex; justify-content: space-between; padding: 0 20px; align-items: center; }
+.logo a { font-weight: 600; font-size: 21px; color: inherit; text-decoration: none; }
+.nav-links { display: flex; gap: 30px; align-items: center; }
+.nav-links a { font-size: 12px; color: var(--text-color); text-decoration: none; opacity: 0.8; transition: 0.3s; }
+.nav-links a:hover { opacity: 1; }
+
+/* Toggle */
+.theme-toggle { display: flex; align-items: center; gap: 8px; }
+.toggle-label { font-size: 12px; color: var(--text-color); opacity: 0.7; }
+.switch { position: relative; display: inline-block; width: 36px; height: 20px; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider { position: absolute; inset: 0; background-color: #d1d1d6; border-radius: 999px; transition: 0.25s; cursor: pointer; }
+.slider::before { content: ""; position: absolute; height: 16px; width: 16px; left: 2px; top: 2px; background-color: white; border-radius: 50%; transition: 0.25s; }
+input:checked + .slider { background-color: var(--accent-color); }
+input:checked + .slider::before { transform: translateX(16px); }
+
+/* --- Specific Styles for Downloads Page --- */
+.hero-mini {
+  padding: 120px 20px 40px;
+  text-align: center;
+}
+.hero-mini h1 { font-size: 48px; font-weight: 600; margin-bottom: 10px; }
+.hero-mini p { font-size: 21px; color: var(--text-secondary); }
+
+.category-label {
+  max-width: 1000px;
+  margin: 40px auto 20px;
+  padding: 0 20px;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+}
+
+.download-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: transform 0.3s var(--easing), box-shadow 0.3s;
+  cursor: pointer;
+  text-decoration: none; /* It's a link block */
+  display: block;
+}
+
+.download-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.download-card h3 { font-size: 22px; color: var(--text-color); margin-bottom: 8px; }
+.download-card p { font-size: 15px; color: var(--text-secondary); }
+
+/* Icons for cards (optional visuals) */
+.os-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+/* Footer */
+footer { padding: 60px 20px; background: var(--card-bg); text-align: center; font-size: 12px; color: var(--text-secondary); }
+
+/* Reveal Animation */
+.reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s var(--easing); }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+</style>
+<script>
+  // Prevent Flash
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark" || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add("dark-mode");
+  }
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-content">
+    <h1 class="logo"><a href="index.html">Libre</a></h1> <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#" style="opacity:1; font-weight:500;">Downloads</a>
+      <div class="theme-toggle">
+        <span class="toggle-label">Dark</span>
+        <label class="switch">
+          <input type="checkbox" id="themeToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="hero-mini reveal">
+  <h1>Choose your version.</h1>
+  <p>Optimized for every environment.</p>
+</div>
+
+<h2 class="category-label reveal">Windows Versions</h2>
+<div class="download-grid reveal">
+  <a href="default.html" class="download-card">
+  <div class="os-icon">💠</div>
+  <span style="font-size:12px; color:var(--accent-color); font-weight:500;">recommended</span>
+  <h3>Windows 11 (Light)</h3>
+  <p>The standard Libre experience.</p>
+</a>
+
+  <a href="windows.html" class="download-card">
+    <div class="os-icon">🪟</div>
+    <h3>Windows 10 (Light)</h3>
+    <p>Optimized for Windows architecture.</p>
+  </a>
+</div>
+
+<h2 class="category-label reveal">Linux Distributions</h2>
+<div class="download-grid reveal">
+  <a href="ubuntu.html" class="download-card">
+  <div class="os-icon">🐧</div>
+  <span style="font-size:12px; color:var(--accent-color); font-weight:500;">recommended</span>
+  <h3>Ubuntu (Light)</h3>
+  <p>Linux made easy.</p>
+</a>
+
+  <a href="mint.html" class="download-card">
+    <div class="os-icon">🍃</div>
+    <h3>Linux Mint (Light)</h3>
+    <p>Lightweight and familiar.</p>
+  </a>
+</div>
+
+<h2 class="category-label reveal">Beta</h2>
+<div class="download-grid reveal">
+  <a href="mac.html" class="download-card" style="opacity: 0.7;">
+    <div class="os-icon">🍎</div>
+    <h3>Mac (beta)</h3>
+    <p>Experimental build for macOS.</p>
+  </a>
+  </div>
+
+<footer>
+  <div style="max-width:980px; margin:0 auto; border-top:1px solid rgba(128,128,128,0.2); padding-top:20px;">
+    Copyright © 2026 strawberry-croissant. All rights reserved.
+  </div>
+</footer>
+
+<script>
+  // Animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('active'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Dark Mode Sync
+  const toggle = document.getElementById("themeToggle");
+  const root = document.documentElement;
+  if (root.classList.contains("dark-mode")) {
+    toggle.checked = true;
+    toggle.setAttribute('aria-checked', 'true');
+  } else {
+    toggle.setAttribute('aria-checked', 'false');
+  }
+  toggle.addEventListener("change", () => {
+    const isDark = toggle.checked;
+    root.classList.toggle("dark-mode", isDark);
+    toggle.setAttribute('aria-checked', isDark.toString());
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  });
+</script>
+
+</body>
+</html>

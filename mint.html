@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Libre - Linux Mint</title>
+  <script>
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark" || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add("dark-mode");
+    }
+  function toggleIsoMenu() {
+    const menu = document.getElementById('iso-menu');
+    const toggleBtn = document.getElementById('iso-toggle');
+    
+    // This toggles the animation class
+    menu.classList.toggle('menu-visible');
+    
+    if (menu.classList.contains('menu-visible')) {
+      toggleBtn.textContent = 'Cancel Selection';
+    } else {
+      toggleBtn.textContent = 'Select .ISO Image';
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="styles/core.css">
+  <link rel="stylesheet" href="styles/components.css">
+
+  <style>
+    /* page-specific: ISO menu animation and small helpers */
+    button.btn { width: 100%; border: none; cursor: pointer; font-family: inherit; }
+    .iso-container { display: flex; flex-direction: column; gap: 8px; }
+    #iso-menu { display: flex; flex-direction: column; gap: 8px; overflow: hidden; max-height: 0; opacity: 0; transform: translateY(-10px) scale(0.95); transition: all 0.5s var(--easing); pointer-events: none; }
+    #iso-menu.menu-visible { max-height: 200px; opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; margin-top: 8px; }
+    .btn-iso { display: block; padding: 14px 0; border-radius: 99px; text-decoration: none; font-weight: 500; font-size: 15px; background: rgba(128,128,128,0.08); color: var(--accent-color); border: 1px solid rgba(128,128,128,0.1); transition: transform 0.2s; }
+    .btn-iso:hover { background: rgba(128,128,128,0.15); transform: scale(1.01); }
+  </style>
+</head>
+<body>
+
+<div class="detail-card">
+  <h1>Linux Mint (Light)</h1>
+  <p>
+  Features the modern <strong>Cinnamon desktop environment</strong>. Extremely lightweight and reliable. Best for developers.
+    <br><br>
+    <span style="font-size: 14px; opacity: 0.7;">
+      Assets: 350MB • Total with ISO: 2.8GB
+    </span>
+  </p>
+
+ <div class="btn-group">
+  <a href="#" class="btn btn-primary">Download Assets & Tweaks</a>
+  
+  <div class="iso-container">
+    <button id="iso-toggle" class="btn btn-secondary" onclick="toggleIsoMenu()">Select .ISO Image</button>
+    
+    <div id="iso-menu" class="menu-hidden">
+      <a href="https://linuxmint.com/edition.php?id=311" target="_blank" class="btn btn-iso">Cinnamon (Standard)</a>
+      <a href="https://linuxmint.com/edition.php?id=313" target="_blank" class="btn btn-iso">XFCE (Lightweight)</a>
+    </div>
+  </div>
+</div>
+
+<div>
+
+  <a href="downloads.html" class="back-link">← Back to selection</a>
+</div>
+
+</body>
+</html>
