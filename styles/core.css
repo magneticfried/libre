@@ -255,7 +255,7 @@ footer {
 }
 
 .download-section .download-link {
-  font-weight: 600;          /* optional: bold link */
+  font-weight: 600;          /* bold link */
   font-size: 20px;           /* slightly bigger for emphasis */
 }
 
@@ -305,7 +305,7 @@ footer {
 
 .os-icon { font-size: 40px; margin-bottom: 20px; opacity: 0.8; }
 
-/* Shared detail-page styles (moved here to avoid duplication) */
+/* Shared detail-page styles */
 .detail-card {
   background: var(--card-bg);
   padding: 48px 48px;

@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="styles/components.css">
 
 <script>
-  // 1. Theme Check (Head)
+  // Theme Check 
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme === "dark" || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     document.documentElement.classList.add("dark-mode");
@@ -110,7 +110,7 @@
 </footer>
 
 <script>
-  // 2. SCROLL REVEAL (Logic only once)
+  // SCROLL REVEAL
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if(entry.isIntersecting){ entry.target.classList.add('active'); }
@@ -118,7 +118,7 @@
   }, { threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  // 3. DARK MODE TOGGLE (Logic only once)
+  // 3. DARK MODE TOGGLE 
   const toggle = document.getElementById("themeToggle");
   const root = document.documentElement;
 
