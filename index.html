@@ -26,10 +26,15 @@
       <a href="downloads.html">Downloads</a>
       <div class="theme-toggle">
         <span class="toggle-label">Dark</span>
-        <label class="switch">
-          <input type="checkbox" id="themeToggle" aria-label="Toggle Dark Mode">
-          <span class="slider"></span>
-        </label>
+       <label class="switch">
+  <input
+    type="checkbox"
+    id="themeToggle"
+    aria-label="toggle dark mode"
+  >
+  <span class="slider"></span>
+
+</label>
       </div>
     </div>
   </div>
@@ -163,7 +168,7 @@
     </div>
     <div class="how-step">
       <h3>3. Install</h3>
-      <p>Use Rufus or your preferred tool to create an installer.</p>
+      <p>Use Rufus to create an installer.</p>
     </div>
   </div>
 </section>
@@ -172,21 +177,9 @@
 <section class="grid-container reveal" id="testimonials" style="grid-template-columns: 1fr;">
   <h2 style="text-align:center; margin-bottom:18px;">What people say</h2>
   <div class="testimonial-grid">
-    <div class="testimonial">“Libre made playing games in school painless — everything just worked.” — anno*****@gmail.com</div>
-    <div class="testimonial">“Fast, lightweight, and privacy-focused. Exactly what I wanted.” — cano******@gmail.com</div>
+      <div class="testimonial">“Libre made playing games in school painless — everything just worked.” — anno*****@gmail.com</div>
+      <div class="testimonial">“six seven six seven” — cano******@gmail.com</div>
     <div class="testimonial">“Great documentation and smooth install process.” — shar***@students.edu.sg</div>
-  </div>
-</section>
-
-<!-- Newsletter -->
-<section class="grid-container reveal" id="newsletter" style="grid-template-columns: 1fr;">
-  <div class="newsletter">
-    <div style="flex:1">
-      <strong>Stay updated</strong>
-      <div style="opacity:0.8; font-size:13px">Get release notes and tips — no spam.</div>
-    </div>
-    <input id="newsletterEmail" type="email" placeholder="you@example.com" aria-label="Email address">
-    <button id="newsletterBtn">Subscribe</button>
   </div>
 </section>
 
@@ -196,33 +189,7 @@
   </div>
 </footer>
 
-<script>
-  // SCROLL REVEAL
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){ entry.target.classList.add('active'); }
-    });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  // 3. DARK MODE TOGGLE 
-  const toggle = document.getElementById("themeToggle");
-  const root = document.documentElement;
-
-  if (root.classList.contains("dark-mode")) {
-    toggle.checked = true;
-    toggle.setAttribute('aria-checked', 'true');
-  } else {
-    toggle.setAttribute('aria-checked', 'false');
-  }
-
-  toggle.addEventListener("change", () => {
-    const isDark = toggle.checked;
-    root.classList.toggle("dark-mode", isDark);
-    toggle.setAttribute('aria-checked', isDark.toString());
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-  });
-</script>
+<!-- Scroll reveal and theme toggle handled by scripts/common.js -->
 
 </body>
 </html>

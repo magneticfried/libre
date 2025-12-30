@@ -363,4 +363,9 @@ footer {
   min-height: 100vh;
   padding: 40px 20px;
 }
+.switch input:focus-visible + .slider {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
 

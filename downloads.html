@@ -85,29 +85,7 @@
   </div>
 </footer>
 
-<script>
-  // Animations
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('active'); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  // Dark Mode Sync
-  const toggle = document.getElementById("themeToggle");
-  const root = document.documentElement;
-  if (root.classList.contains("dark-mode")) {
-    toggle.checked = true;
-    toggle.setAttribute('aria-checked', 'true');
-  } else {
-    toggle.setAttribute('aria-checked', 'false');
-  }
-  toggle.addEventListener("change", () => {
-    const isDark = toggle.checked;
-    root.classList.toggle("dark-mode", isDark);
-    toggle.setAttribute('aria-checked', isDark.toString());
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-  });
-</script>
+<!-- Scroll reveal and theme toggle handled by scripts/common.js -->
 
 </body>
 </html>
