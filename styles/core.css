@@ -224,6 +224,9 @@
     opacity: 1;
     transform: scale(1) translateY(0);
   }
+  .reveal-slow {
+    transition-delay: 0.3s;
+  }
 
   /* footer */
   footer {
@@ -373,6 +376,7 @@
     outline: 2px solid currentColor;
     outline-offset: 3px;
   }
+  /* links classes */
   a.oss-link {
     color: inherit;
     text-decoration: none;

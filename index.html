@@ -7,7 +7,7 @@
 <script defer src="scripts/common.js"></script>
 <link rel="stylesheet" href="styles/core.css">
 <link rel="stylesheet" href="styles/components.css">
-
+<link rel="stylesheet" href="styles/pages/index.css">
 <script>
   // Theme Check 
   const savedTheme = localStorage.getItem("theme");
@@ -22,8 +22,9 @@
   <div class="nav-content">
     <h1 class="logo"><a href="#">Libre</a></h1>
     <div class="nav-links">
-      <a href="#features">Features</a>
+      <a href="#faq">FAQ</a>
       <a href="downloads.html">Downloads</a>
+      <a href="contact-us.html">Contact Us</a>
       <div class="theme-toggle">
         <span class="toggle-label">Dark</span>
        <label class="switch">
@@ -95,14 +96,6 @@
     <p> Libre has been tested against standard tracking tools and results show that it is virtually undetectable².</p>
   </div>
 </section>
-
-<section class="download-section" id="downloads">
-  <h2 class="reveal">Get the latest.</h2>
-  <div class="download-row reveal" style="justify-content: center;">
-    <a href="downloads.html" class="download-link">Download Libre v0.92 (beta) ›</a>
-  </div>
-</section>
-
 <style>
 #downloads h2 {
   font-size: clamp(32px, 6vw, 48px);
@@ -203,8 +196,16 @@
     <h3>Is my data safe with Libre?</h3>
     <p>Absolutely. Libre prioritizes your privacy and security.</p>
   </div>
-</section>  
-
+</section> 
+<section class="download-section" id="downloads">
+  <h2 class="reveal">Get the latest.</h2>
+  <div class="download-row reveal" style="justify-content: center;">
+    <a href="downloads.html" class="download-link">Download Libre v0.92 (beta) ›</a>
+  </div>
+</section>
+<section class="contact-us">
+  <h2 class="reveal"><a href="contact-us.html">Contact Us</a></h2>
+</section>
 <footer>
   <div style="max-width:980px; margin:0 auto; border-top:1px solid rgba(128,128,128,0.2); padding-top:20px; text-align:center;">
     Copyright © 2026 strawberry-croissant. All rights reserved.
