@@ -6,14 +6,8 @@
 <title>Libre - Downloads</title>
     <link rel="stylesheet" href="styles/core.css">
   <link rel="stylesheet" href="styles/components.css">
-  <script defer src="scripts/common.js"></script>
-<script>
-  // Prevent Flash
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "dark" || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.classList.add("dark-mode");
-  }
-</script>
+  <link rel="stylesheet" href="styles/pages/downloads.css">
+  <script src="scripts/common.js"></script>
 </head>
 <body>
 
@@ -21,7 +15,8 @@
   <div class="nav-content">
     <h1 class="logo"><a href="index.html">Libre</a></h1> <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="#" style="opacity:1; font-weight:500;">Downloads</a>
+      <a href="legal.html">Legal</a>
+      <a href="downloads.html" style="opacity:1; font-weight:500;">Downloads</a>
       <a href="contact-us.html">Contact Us</a>
       <div class="theme-toggle">
         <span class="toggle-label">Dark</span>
@@ -38,10 +33,7 @@
     </div>
   </div>
 </nav>
-<script>
-  document.getElementById('themeToggle')?.checked =
-    document.documentElement.classList.contains('dark-mode');
-</script>
+
 
 <div class="hero-mini reveal">
   <h1>Choose your version.</h1>

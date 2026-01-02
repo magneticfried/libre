@@ -4,15 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Libre - Windows 10</title>
-<script>
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "dark" || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.classList.add("dark-mode");
-  }
-  </script>
   <link rel="stylesheet" href="styles/core.css">
   <link rel="stylesheet" href="styles/components.css">
-<script defer src="scripts/common.js"></script> 
+  <link rel="stylesheet" href="styles/pages/windows.css">
+<script src="scripts/common.js"></script> 
 </head>
 <body class="detail-page">
 

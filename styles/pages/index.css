@@ -3,7 +3,83 @@
   text-align: center;
   padding: 80px 20px;
 }
+
 .contact-us h2 {
   font-size: 28px;
   margin-bottom: 20px;
+}
+
+/* Moved from index.html */
+#downloads h2 {
+  font-size: clamp(32px, 6vw, 48px);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#downloads .download-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* New page-specific styles */
+.platform-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  max-width: 980px;
+  margin: 30px auto;
+}
+
+.platform-card {
+  background: var(--card-bg, #fff);
+  border-radius: 12px;
+  padding: 18px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--shadow);
+  display: block;
+  transition: transform .15s ease, box-shadow .15s ease
+}
+
+.platform-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08)
+}
+
+.platform-card .os-icon {
+  font-size: 28px
+}
+
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+  max-width: 980px;
+  margin: 30px auto
+}
+
+.how-step {
+  background: var(--card-bg, #fff);
+  padding: 18px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: var(--shadow)
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  max-width: 980px;
+  margin: 30px auto
+}
+
+.testimonial {
+  background: var(--card-bg, #fff);
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  font-size: 14px
 }

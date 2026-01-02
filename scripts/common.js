@@ -20,9 +20,15 @@
 
   function applySavedTheme() {
     const saved = safeGetItem("theme");
-    if (saved === "dark") document.documentElement.classList.add("dark-mode");
-    else if (saved === "light") document.documentElement.classList.remove("dark-mode");
+    if (saved === "dark" || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add("dark-mode");
+    } else {
+      document.documentElement.classList.remove("dark-mode");
+    }
   }
+
+  // Apply immediately to prevent flash
+  applySavedTheme();
 
   function syncToggleState(toggle) {
     if (!toggle) return;

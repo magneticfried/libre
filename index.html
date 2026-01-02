@@ -1,215 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Libre</title>
-<script defer src="scripts/common.js"></script>
-<link rel="stylesheet" href="styles/core.css">
-<link rel="stylesheet" href="styles/components.css">
-<link rel="stylesheet" href="styles/pages/index.css">
-<script>
-  // Theme Check 
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "dark" || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.classList.add("dark-mode");
-  }
-</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Libre</title>
+  <link rel="stylesheet" href="styles/core.css">
+  <script src="scripts/common.js"></script>
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/pages/index.css">
 </head>
 <body>
 
-<nav>
-  <div class="nav-content">
-    <h1 class="logo"><a href="#">Libre</a></h1>
-    <div class="nav-links">
-      <a href="#faq">FAQ</a>
-      <a href="downloads.html">Downloads</a>
-      <a href="contact-us.html">Contact Us</a>
-      <div class="theme-toggle">
-        <span class="toggle-label">Dark</span>
-       <label class="switch">
-       <input
-       type="checkbox"
-       id="themeToggle"
-       aria-label="toggle dark mode"
-       role="switch">
-  
-      <span class="slider"></span>
-      </label>
+  <nav>
+    <div class="nav-content">
+      <h1 class="logo"><a href="index.html">Libre</a></h1>
+      <div class="nav-links">
+        <a href="legal.html">Legal</a>
+        <a href="downloads.html">Downloads</a>
+        <a href="contact-us.html">Contact Us</a>
+        <div class="theme-toggle">
+          <span class="toggle-label">Dark</span>
+          <label class="switch">
+            <input type="checkbox" id="themeToggle" aria-label="toggle dark mode" role="switch">
 
+            <span class="slider"></span>
+          </label>
+
+        </div>
       </div>
     </div>
+  </nav>
+
+
+  <div class="hero">
+    <h1 class="reveal">Take control.</h1>
+    <p class="reveal">Your freedom, your choice.</p>
+    <p class="reveal">Libre allows you to use your computer without restrictions.</p>
+    <p class="reveal">Explore, modify, and fully control your software environment.</p>
+    <p class="reveal">Libre is also open source! Check it out on <a href="https://github.com/strawberry-croissant/libre"
+        class="gh-link">github.</a></p>
+    <p class="reveal" style="font-weight: 500; color: var(--text-color); margin-top: 20px;">Freedom on your terms.</p>
   </div>
-</nav>
-<script>
-  document.getElementById('themeToggle')?.checked =
-    document.documentElement.classList.contains('dark-mode');
-</script>
 
-<div class="hero">
-  <h1 class="reveal">Take control.</h1>
-  <p class="reveal">Your freedom, your choice.</p>
-  <p class="reveal">Libre allows you to use your computer without restrictions.</p>
-  <p class="reveal">Explore, modify, and fully control your software environment.</p>
-  <p class="reveal">Libre is also open source! Check it out on <a href="https://github.com/strawberry-croissant/libre" class="gh-link">github.</a></p>
-  <p class="reveal" style="font-weight: 500; color: var(--text-color); margin-top: 20px;">Freedom on your terms.</p>
-</div>
+  <section class="grid-container" id="features">
+    <div class="bento-card full-width reveal">
+      <h2>Experience Libre.</h2>
+      <p>Everything you need, instantly ready. Smooth, simple, and completely unrestricted.</p>
 
-<section class="grid-container" id="features">
-  <div class="bento-card full-width reveal">
-    <h2>Experience Libre.</h2>
-    <p>Everything you need, instantly ready. Smooth, simple, and completely unrestricted.</p>
+      <div class="features-grid">
+        <div class="feature-item">
+          <h3>Run Anything</h3>
+          <p>Install and run any program without restrictions.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Full Customization</h3>
+          <p>Shape your interface to your exact liking.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Privacy First</h3>
+          <p>Your data stays yours, no compromises.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Lightweight</h3>
+          <p>Quick, smooth, and reliable performance.</p>
+        </div>
+      </div>
 
-    <div class="features-grid">
-      <div class="feature-item">
-        <h3>Run Anything</h3>
-        <p>Install and run any program without restrictions.</p>
+      <p class="cta">Get started today</p>
+    </div>
+  </section>
+
+  <section class="grid-container" id="extra-features">
+    <div class="bento-card reveal">
+      <h2>Speed.</h2>
+      <p>Optimized performance across all platforms.</p>
+      <p>Libre boots up in under 1 minute on most hardware, ensuring you're ready to go when you need it.</p>
+      <p> Furthermore, Libre uses your hardware, ensuring maximum compatibility and performance. </p>
+    </div>
+    <div class="bento-card reveal">
+      <h2>Undetectable.</h2>
+      <p>The entire system is ran on a USB device, making it virtually untracable through standard means¹.</p>
+      <p> Libre has been tested against standard tracking tools and results show that it is virtually undetectable².</p>
+    </div>
+  </section>
+
+
+  <!-- Platforms -->
+  <section class="grid-container reveal" id="platforms" style="grid-template-columns: 1fr;">
+    <h2 style="text-align:center; margin-bottom:18px;">Available Platforms</h2>
+    <div class="platform-grid">
+      <a class="platform-card" href="default.html">
+        <div class="os-icon">💠</div>
+        <h3>Windows 11 (Recommended)</h3>
+        <p style="opacity:0.8; font-size:14px;">The full Libre experience with drivers and tools.</p>
+      </a>
+      <a class="platform-card" href="windows.html">
+        <div class="os-icon">🪟</div>
+        <h3>Windows 10</h3>
+        <p style="opacity:0.8; font-size:14px;">Stable and compatible with older hardware.</p>
+      </a>
+      <a class="platform-card" href="ubuntu.html">
+        <div class="os-icon">🐧</div>
+        <h3>Ubuntu</h3>
+        <p style="opacity:0.8; font-size:14px;">GNOME-based, beginner-friendly Linux build.</p>
+      </a>
+      <a class="platform-card" href="mint.html">
+        <div class="os-icon">🍃</div>
+        <h3>Linux Mint</h3>
+        <p style="opacity:0.8; font-size:14px;">Lightweight and developer-friendly.</p>
+      </a>
+      <a class="platform-card" href="mac.html" style="opacity:0.9;">
+        <div class="os-icon">🍎</div>
+        <h3>Mac (Beta)</h3>
+        <p style="opacity:0.8; font-size:14px;">Experimental macOS build — use with caution.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="grid-container reveal" id="how-it-works" style="grid-template-columns: 1fr;">
+    <h2 style="text-align:center; margin-bottom:18px;">How it works</h2>
+    <div class="how-grid">
+      <div class="how-step">
+        <h3>1. Choose</h3>
+        <p>Pick the platform that fits your device.</p>
       </div>
-      <div class="feature-item">
-        <h3>Full Customization</h3>
-        <p>Shape your interface to your exact liking.</p>
+      <div class="how-step">
+        <h3>2. Prepare</h3>
+        <p>Download assets and follow the included instructions.</p>
       </div>
-      <div class="feature-item">
-        <h3>Privacy First</h3>
-        <p>Your data stays yours, no compromises.</p>
-      </div>
-      <div class="feature-item">
-        <h3>Lightweight</h3>
-        <p>Quick, smooth, and reliable performance.</p>
+      <div class="how-step">
+        <h3>3. Install</h3>
+        <p>Use Rufus to create an installer.</p>
       </div>
     </div>
+  </section>
 
-    <p class="cta">Get started today</p>
-  </div>
-</section>
-
-<section class="grid-container" id="extra-features">
-  <div class="bento-card reveal">
-    <h2>Speed.</h2>
-    <p>Optimized performance across all platforms.</p>
-    <p>Libre boots up in under 1 minute on most hardware, ensuring you're ready to go when you need it.</p>
-    <p> Furthermore, Libre uses your hardware, ensuring maximum compatibility and performance.  </p>
-  </div>
-  <div class="bento-card reveal">
-    <h2>Undetecable.</h2>
-    <p>The entire system is ran on a USB device, making it virtually untracable through standard means¹.</p>
-    <p> Libre has been tested against standard tracking tools and results show that it is virtually undetectable².</p>
-  </div>
-</section>
-<style>
-#downloads h2 {
-  font-size: clamp(32px, 6vw, 48px);
-  text-align: center;
-  margin-bottom: 30px;
-}
-#downloads .download-row {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-/* New page-specific styles */
-.platform-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:18px; max-width:980px; margin:30px auto; }
-.platform-card{background:var(--card-bg, #fff); border-radius:12px; padding:18px; text-decoration:none; color:inherit; box-shadow:var(--shadow); display:block; transition:transform .15s ease, box-shadow .15s ease}
-.platform-card:hover{transform:translateY(-6px); box-shadow:0 10px 30px rgba(0,0,0,0.08)}
-.platform-card .os-icon{font-size:28px}
-.how-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;max-width:980px;margin:30px auto}
-.how-step{background:var(--card-bg,#fff);padding:18px;border-radius:12px;text-align:center;box-shadow:var(--shadow)}
-.testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;max-width:980px;margin:30px auto}
-.testimonial{background:var(--card-bg,#fff);padding:16px;border-radius:10px;box-shadow:var(--shadow);font-size:14px}
-.newsletter{max-width:640px;margin:24px auto 48px;padding:18px;border-radius:12px;background:var(--card-bg,#fff);box-shadow:var(--shadow);display:flex;gap:12px;align-items:center}
-.newsletter input{flex:1;padding:12px;border-radius:8px;border:1px solid rgba(0,0,0,0.08)}
-.newsletter button{padding:12px 18px;border-radius:8px;border:none;background:var(--accent-color);color:#fff;font-weight:600;cursor:pointer}
-</style>
-<!-- Platforms -->
-<section class="grid-container reveal" id="platforms" style="grid-template-columns: 1fr;">
-  <h2 style="text-align:center; margin-bottom:18px;">Available Platforms</h2>
-  <div class="platform-grid">
-    <a class="platform-card" href="default.html">
-      <div class="os-icon">💠</div>
-      <h3>Windows 11 (Recommended)</h3>
-      <p style="opacity:0.8; font-size:14px;">The full Libre experience with drivers and tools.</p>
-    </a>
-    <a class="platform-card" href="windows.html">
-      <div class="os-icon">🪟</div>
-      <h3>Windows 10</h3>
-      <p style="opacity:0.8; font-size:14px;">Stable and compatible with older hardware.</p>
-    </a>
-    <a class="platform-card" href="ubuntu.html">
-      <div class="os-icon">🐧</div>
-      <h3>Ubuntu</h3>
-      <p style="opacity:0.8; font-size:14px;">GNOME-based, beginner-friendly Linux build.</p>
-    </a>
-    <a class="platform-card" href="mint.html">
-      <div class="os-icon">🍃</div>
-      <h3>Linux Mint</h3>
-      <p style="opacity:0.8; font-size:14px;">Lightweight and developer-friendly.</p>
-    </a>
-    <a class="platform-card" href="mac.html" style="opacity:0.9;">
-      <div class="os-icon">🍎</div>
-      <h3>Mac (Beta)</h3>
-      <p style="opacity:0.8; font-size:14px;">Experimental macOS build — use with caution.</p>
-    </a>
-  </div>
-</section>
-
-<!-- How it works -->
-<section class="grid-container reveal" id="how-it-works" style="grid-template-columns: 1fr;">
-  <h2 style="text-align:center; margin-bottom:18px;">How it works</h2>
-  <div class="how-grid">
-    <div class="how-step">
-      <h3>1. Choose</h3>
-      <p>Pick the platform that fits your device.</p>
-    </div>
-    <div class="how-step">
-      <h3>2. Prepare</h3>
-      <p>Download assets and follow the included instructions.</p>
-    </div>
-    <div class="how-step">
-      <h3>3. Install</h3>
-      <p>Use Rufus to create an installer.</p>
-    </div>
-  </div>
-</section>
-
-<!-- fortnite balls im gay i kidnap autistic kids little mosey is watching -->
-<section class="grid-container reveal" id="testimonials" style="grid-template-columns: 1fr;">
-  <h2 style="text-align:center; margin-bottom:18px;">What people say</h2>
-  <div class="testimonial-grid">
-      <div class="testimonial">“Libre made playing games in school painless — everything just worked.” — anno*****@gmail.com</div>
+  <!-- Testimonials -->
+  <section class="grid-container reveal" id="testimonials" style="grid-template-columns: 1fr;">
+    <h2 style="text-align:center; margin-bottom:18px;">What people say</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial">“Libre made playing games in school painless — everything just worked.” —
+        anno*****@gmail.com</div>
       <div class="testimonial">“six seven six seven” — cano******@gmail.com</div>
-    <div class="testimonial">“Great documentation and smooth install process.” — shar***@students.edu.sg</div>
-  </div>
-</section>
+      <div class="testimonial">“Great documentation and smooth install process.” — shar***@students.edu.sg</div>
+    </div>
+  </section>
 
-<section class="grid-container reveal" id="faq" style="grid-template-columns: 1fr; text-align: center;">
- <h2 style="text-align:center; margin-bottom:18px;">FAQ</h2>
-  <div class="faq-item">
-    <h3>Is Libre free to use?</h3>
-    <p>Yes, Libre is completely free and <a href="https://github.com/strawberry-croissant/libre" class="oss-link">open-source.</a></p>
-  </div>
-  <div class="faq-item">
-    <h3>Can I install any software on Libre?</h3>
-    <p>Yes, Libre allows you to install and run any compatible software without restrictions.</p>
-  </div>
-  <div class="faq-item">
-    <h3>Is my data safe with Libre?</h3>
-    <p>Absolutely. Libre prioritizes your privacy and security.</p>
-  </div>
-</section> 
-<section class="download-section" id="downloads">
-  <h2 class="reveal">Get the latest.</h2>
-  <div class="download-row reveal" style="justify-content: center;">
-    <a href="downloads.html" class="download-link">Download Libre v0.92 (beta) ›</a>
-  </div>
-</section>
-<section class="contact-us">
-  <h2 class="reveal"><a href="contact-us.html">Contact Us</a></h2>
-</section>
-<footer>
-  <div style="max-width:980px; margin:0 auto; border-top:1px solid rgba(128,128,128,0.2); padding-top:20px; text-align:center;">
-    Copyright © 2026 strawberry-croissant. All rights reserved.
-  </div>
-</footer>
+  <section class="grid-container reveal" id="faq" style="grid-template-columns: 1fr; text-align: center;">
+    <h2 style="text-align:center; margin-bottom:18px;">FAQ</h2>
+    <div class="faq-item">
+      <h3>Is Libre free to use?</h3>
+      <p>Yes, Libre is completely free and <a href="https://github.com/strawberry-croissant/libre"
+          class="oss-link">open-source.</a></p>
+    </div>
+    <div class="faq-item">
+      <h3>Can I install any software on Libre?</h3>
+      <p>Yes, Libre allows you to install and run any compatible software without restrictions.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is my data safe while using Libre?</h3>
+      <p>Absolutely. Libre prevents all software-based tracking and monitoring³.</p>
+    </div>
+  </section>
+  <section class="download-section" id="downloads">
+    <h2 class="reveal">Get the latest.</h2>
+    <div class="download-row reveal" style="justify-content: center;">
+      <a href="downloads.html" class="download-link">Download Libre v0.92 (beta) ›</a>
+    </div>
+  </section>
+  <section class="contact-us">
+    <h2 class="reveal"><a href="contact-us.html">Contact Us</a></h2>
+  </section>
+  <section class="legal-stuff" style="text-align:center; margin-bottom:auto">
+    <h2 class="reveal"><a href="legal.html">legal stuff and fluff</a></h2>
+  </section>
+  <section style="text-align:center; margin-bottom:27px;">
+    <h2 class="reveal">Libre is a project by <a href="https://github.com/strawberry-croissant">strawberry-croissant</a></h2>
+    <p class="reveal">1. by standard means, we mean software based tracking and not hardware based tracking.</p>
+    <p class="reveal">2. by virtually undetectable, we mean that Libre can deny all kinds of software controlling programs on your existing operating system.</p>
+    <p class="reveal">3. by monitoring, we mean software-based monitoring and not hardware-based monitoring.</p>
+  </section>
+  <footer>
+    <div style="max-width:980px; margin:0 auto; border-top:1px solid rgba(128,128,128,0.2); padding-top:20px; text-align:center;">
+      Copyright © 2026 strawberry-croissant. All rights reserved.
+    </div>
+  </footer>
 </body>
 </html>
