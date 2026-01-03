@@ -40,16 +40,16 @@
   color: inherit;
   box-shadow: var(--shadow);
   display: block;
-  transition: transform .15s ease, box-shadow .15s ease
+  transition: transform .15s ease, box-shadow .15s ease;
 }
 
 .platform-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08)
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .platform-card .os-icon {
-  font-size: 28px
+  font-size: 28px;
 }
 
 .how-grid {
@@ -57,7 +57,7 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 18px;
   max-width: 980px;
-  margin: 30px auto
+  margin: 30px auto;
 }
 
 .how-step {
@@ -65,7 +65,7 @@
   padding: 18px;
   border-radius: 12px;
   text-align: center;
-  box-shadow: var(--shadow)
+  box-shadow: var(--shadow);
 }
 
 .testimonial-grid {
@@ -73,7 +73,7 @@
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 18px;
   max-width: 980px;
-  margin: 30px auto
+  margin: 30px auto;
 }
 
 .testimonial {
@@ -81,5 +81,31 @@
   padding: 16px;
   border-radius: 10px;
   box-shadow: var(--shadow);
-  font-size: 14px
+  font-size: 14px;
+}
+
+.gitprofile {
+  text-align: center;
+}
+
+/* Refactor classes */
+.download-link-wrapper {
+  margin-bottom: 22px;
+}
+
+.project-by-heading {
+  margin-bottom: 18px;
+  margin-top: 18px;
+  font-size: 32px;
+}
+
+.legal-section {
+  text-align: center;
+  margin-bottom: 24px;
+  margin-top: 20px;
+}
+
+.small-stuff {
+  font-size: 13px;
+  margin-bottom: 18px;
 }

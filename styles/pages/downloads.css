@@ -1,0 +1,13 @@
+/* Page specific styles for downloads.html */
+
+.recommended-badge {
+  font-size: 12px;
+  color: var(--accent-color);
+  font-weight: 500;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.beta-card {
+  opacity: 0.7;
+}

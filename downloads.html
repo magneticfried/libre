@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Download Libre for Windows, Ubuntu, Linux Mint, and macOS. Choose the version that fits your needs.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%231d1d1f'/><path d='M30 30 L60 50 L30 70' stroke='%232997ff' stroke-width='12' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
 <title>Libre - Downloads</title>
     <link rel="stylesheet" href="styles/core.css">
   <link rel="stylesheet" href="styles/components.css">
@@ -16,7 +18,7 @@
     <h1 class="logo"><a href="index.html">Libre</a></h1> <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="legal.html">Legal</a>
-      <a href="downloads.html" style="opacity:1; font-weight:500;">Downloads</a>
+      <a href="downloads.html" class="active">Downloads</a>
       <a href="contact-us.html">Contact Us</a>
       <div class="theme-toggle">
         <span class="toggle-label">Dark</span>
@@ -43,14 +45,14 @@
 <h2 class="category-label reveal">Windows Versions</h2>
 <div class="download-grid reveal">
   <a href="default.html" class="download-card">
-  <div class="os-icon">💠</div>
-  <span style="font-size:12px; color:var(--accent-color); font-weight:500;">recommended</span>
+  <div class="os-icon" role="img" aria-label="Windows 11">💠</div>
+  <span class="recommended-badge">recommended</span>
   <h3>Windows 11 (Light)</h3>
   <p>The standard Libre experience.</p>
 </a>
 
   <a href="windows.html" class="download-card">
-    <div class="os-icon">🪟</div>
+    <div class="os-icon" role="img" aria-label="Windows 10">🪟</div>
     <h3>Windows 10 (Light)</h3>
     <p>Optimized for Windows architecture.</p>
   </a>
@@ -59,14 +61,14 @@
 <h2 class="category-label reveal">Linux Distributions</h2>
 <div class="download-grid reveal">
   <a href="ubuntu.html" class="download-card">
-  <div class="os-icon">🐧</div>
-  <span style="font-size:12px; color:var(--accent-color); font-weight:500;">recommended</span>
+  <div class="os-icon" role="img" aria-label="Ubuntu">🐧</div>
+  <span class="recommended-badge">recommended</span>
   <h3>Ubuntu (Light)</h3>
   <p>Linux made easy.</p>
 </a>
 
   <a href="mint.html" class="download-card">
-    <div class="os-icon">🍃</div>
+    <div class="os-icon" role="img" aria-label="Linux Mint">🍃</div>
     <h3>Linux Mint (Light)</h3>
     <p>Lightweight and familiar.</p>
   </a>
@@ -74,8 +76,8 @@
 
 <h2 class="category-label reveal">Beta</h2>
 <div class="download-grid reveal">
-  <a href="mac.html" class="download-card" style="opacity: 0.7;">
-    <div class="os-icon">🍎</div>
+  <a href="mac.html" class="download-card beta-card">
+    <div class="os-icon" role="img" aria-label="Apple">🍎</div>
     <h3>Mac (beta)</h3>
     <p>Experimental build for macOS.</p>
   </a>
