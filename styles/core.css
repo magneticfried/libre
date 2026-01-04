@@ -244,6 +244,36 @@
   }
 
   /* responsive */
+  /* Tablet & Mobile Tweaks (max-width: 1080px) */
+  @media (max-width: 1080px) {
+    .detail-card {
+      padding: 32px 24px;
+    }
+
+    .bento-card {
+      min-height: auto;
+      padding: 40px 24px;
+    }
+
+    /* Fix nav compression */
+    .nav-content {
+      padding: 0 16px;
+    }
+    
+    .logo {
+      flex-shrink: 0;
+    }
+    
+    .nav-links {
+      gap: 14px;
+    }
+    
+    .toggle-label {
+      display: none;
+    }
+  }
+
+  /* Mobile Specific (max-width: 734px) */
   @media (max-width: 734px) {
     .grid-container {
       grid-template-columns: 1fr;
@@ -407,4 +437,9 @@
 
 .hero a.gh-link:hover {
   text-decoration-color: var(--text-color);
+}
+a.slight-silent-link {
+  color:var(--text-color);
+  text-decoration: underline;
+  text-decoration-color: rgba(128, 128, 128, 1.2);
 }

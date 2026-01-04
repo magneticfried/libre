@@ -93,10 +93,10 @@
   margin-bottom: 22px;
 }
 
-.project-by-heading {
+#downloads .project-by-heading {
   margin-bottom: 18px;
   margin-top: 18px;
-  font-size: 32px;
+  font-size: 20px;
 }
 
 .legal-section {
@@ -108,4 +108,31 @@
 .small-stuff {
   font-size: 13px;
   margin-bottom: 18px;
+}
+#faq.bento-card {
+  min-height: auto;
+  padding: 40px 20px; 
+  max-width: 800px;
+}
+
+@media (max-width: 1080px) {
+  .platform-grid,
+  .how-grid,
+  .testimonial-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  /* Make sure content fits in smaller columns */
+  .platform-card, .how-step, .testimonial {
+    padding: 12px;
+  }
+  
+  .platform-card h3, .how-step h3 {
+    font-size: 16px;
+  }
+  
+  .platform-card p, .how-step p, .testimonial {
+    font-size: 13px;
+  }
 }
